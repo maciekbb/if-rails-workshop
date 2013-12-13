@@ -11,9 +11,10 @@
 </p>
 
 <b>Comments</b>
-<div id="comments">
+
+<ul id="comments">
   <%= render @post.comments %>
-</div>
+</ul>
 
 <b>Add comment</b>
 <%= form_for [@post, @post.comments.build], remote: true do |f| %>

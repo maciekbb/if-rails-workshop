@@ -1,1 +1,3 @@
-<%= comment.content %><br>
+<%= content_tag_for 'li', comment do %>
+	<%= comment.content %> [<%= link_to "Usuń", [comment.post, comment], method: :delete, remote: true %>] 
+<% end %>
